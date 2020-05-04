@@ -1,0 +1,108 @@
+Stpes for dev Spring MVC-> Servlet api (Hello-world) application
+
+1 pom.xml -> Dependencies
+	spring webmvc
+
+2 web.xml -> DD
+	<servlet>
+	</servlet>
+	<servlet-mapping>                         Configure
+	</servlet-mapping>
+
+	DispatcherServlet -> FC
+
+3	dispatcher-servlet.xml
+
+	<context:component-scan base-package="com.zensar"/>  Configure
+
+4 	Controllers
+
+		// http://localhost:8080/hello
+
+		@Controller
+		class TestController{
+		// http://localhost:8080/
+			@RequestMapping("/")
+			public String sayHello(){
+				return "index"; ->  view
+			}
+		
+			@RequestMapping("/hello")
+			public String sayHello(){
+				return "hello"; -> logical Name of the view
+			}
+			@RequestMapping("/hi")
+			public String sayHi(){
+				return "hi";
+			}
+		}
+
+5 dispatcher-servlet.xml
+
+	<bean id="" class="">
+		<property name="prefix"></property>  Configure
+	</bean>
+
+6 Dispatcher Servlet
+
+
+
+Spring Boot version
+
+	Spring Boot version 1.x = 1.5.4.RELEASE
+	Spring Boot version 2.x = All endpoints are disabled except info,health -> non secured endpoint
+
+
+Different ways of creating spring boot projects:-
+
+1 Manaul Way
+2 Spring Inintilizer
+
+
+Project Lombook
+
+
+Controllers :-
+
+Are just a gateway to the BL
+
+
+List<Product> products = new ArrayList<>();  - DP
+
+Managing the flow of application - controller
+
+BL
+
+yml or yaml ->
+
+Attendance :- https://bit.ly/2xL3b9M
+
+Feedback :- https://bit.ly/2KxS7zL
+
+Assissment :- SF/Zenlearn
+
+
+ insert 
+    into
+        product
+        (product_cost, product_name, product_id) 
+    values
+        (?, ?, ?)
+
+Actuator
+
+Spring Security- 16 
+
+Repository -> Marker Interface(tagging interface)
+
+CrudRepository<Product,Integer>
+
+PagingAndSortingRepository -> findAll()
+
+JpaRepository
+
+Actuator endpoints :- info ,health
+
+
+
+
